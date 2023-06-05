@@ -15,7 +15,7 @@
 ## Overview
 
 This project helps recommend similar courses on udemy for which the user is searching for. The user enters the name or phrase of a subject of interest and related courses will be recommended and displayed. There is also and analysis dashboard that gives all the analysis of the usemy courses available in the dataset. </br></br>
-<img src="img/">
+<img src="img/udemy_courses.png">
 
 ## Motivation
 
