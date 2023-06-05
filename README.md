@@ -22,7 +22,12 @@ This project helps recommend similar courses for which the user is searching for
 ## Problem Solving Steps
 
 1. Import the dataset
-2. Peform Text Preprocessing and EDA
+2. Peform Text Preprocessing 
+3. Perform Exploratory Data Analysis (EDA) an generate insights.
+4. Convert text to numveric values and calculate the cosine similarity score.
+5. After finding the similarity score, sort the values which have similar similarity score and recommend the course.
+6. Integrate the Recommendation System with Flask Framework.
+7. Deploy the web Application on a cloud platform
 
 ## Source of Dataset
 
