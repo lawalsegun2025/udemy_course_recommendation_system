@@ -14,11 +14,15 @@
 
 ## Overview
 
+This project helps recommend similar courses for which the user is searching for.</br></br>
 <img src="img/">
 
 ## Motivation
 
 ## Problem Solving Steps
+
+1. Import the dataset
+2. Peform Text Preprocessing and EDA
 
 ## Source of Dataset
 
