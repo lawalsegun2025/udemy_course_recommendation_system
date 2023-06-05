@@ -1,4 +1,4 @@
-# Course Recomendation System
+# Udemy Course Recomendation System
 
 ## Table of Content
 * [Overview](#overview)
@@ -14,7 +14,8 @@
 
 ## Overview
 
-This project helps recommend similar courses for which the user is searching for.</br></br>
+This project helps recommend similar courses on udemy for which the user is searching for. 
+The user enters the name or phrase of a subject of interest and related courses will be recommended and displayed</br></br>
 <img src="img/">
 
 ## Motivation
