@@ -5,6 +5,7 @@
 * [Motivation](#motivation)
 * [Problem Solving Steps](#problem-solving-steps)
 * [Source of Dataset](#source-of-dataset)
+* [Recommendation System](#recommendation-system)
 * [Data Cleaning Techniques](#data-cleaning-techniques)
 * [Exploratory Data Analysis](#exploratory-data-analysis)
 * [Model Building](#model-building)
@@ -30,6 +31,10 @@ This project helps recommend similar courses on udemy for which the user is sear
 7. Deploy the web Application on a cloud platform
 
 ## Source of Dataset
+
+The dataset was gotten from udemy courses website.
+
+## Recommendation System
 
 ## Data Cleaning Techniques
 
