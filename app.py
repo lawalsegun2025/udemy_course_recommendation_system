@@ -96,11 +96,18 @@ def recommend_course(df, title, cosine_mat, num_rec):
     return final_recommende_courses.head(num_rec)
 
 
+# this is called when a part of the title is uesd and not the complete title
+def search_term(term, df):
+    result_df = df[df["course_title"].str.contains(term)]
+    top_6 = result_df.sort_values(by="num_subscribers", ascending=False).head(6)
+    return top_6
+    
+
 # Extract features from the  recommended dataframe
-def extract_features(rec_def):
+def extract_features(rec_df):
 
     # get course url
-    course_url = list(rec_def["url"])
+    course_url = list(rec_df["url"])
     # get course title
     course_title = list(rec_df["course_title"])
     # get course price
@@ -136,3 +143,16 @@ def hello_world():
             # get recommended courses dataframe
             rec_df = recommend_course(df, title_name, 
                                       cosine_mat, num_rec)
+            
+            # get features from recommended dataframe
+            course_url, course_title, course_price = extract_features(rec_df)
+
+            dict_map = dict(zip(course_title, course_url))
+
+            if len(dict_map) != 0:
+                return render_template('index.html', coursemap=dict_map, coursename=title_name, showtitle=True)
+            
+            else:
+                return render_template("index.html", showerror=True, coursename=title_name)
+            
+        except:
