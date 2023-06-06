@@ -53,3 +53,13 @@ def read_data():
 
     return df
 
+
+# This is the main recommendation system for a selected title
+def recommend_course(df, title, cosine_mat, num_rec):
+
+    # get selected course title ad index and drop duplicate
+    course_index = pd.Series(df.index, 
+                        index=df["course_title"]).drop_duplicates()
+    
+    # Get the index number of the selected course title
+    index = course_index[title]
