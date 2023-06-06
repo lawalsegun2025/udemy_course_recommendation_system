@@ -156,3 +156,25 @@ def hello_world():
                 return render_template("index.html", showerror=True, coursename=title_name)
             
         except:
+            result_df = search_term(title_name, df)
+            if result_df.shape[0] > 6:
+                result_df = result_df.head(6)
+                course_url, course_title, course_price = extract_features(result_df)
+                course_map = dict(zip(course_title, course_url))
+                if len(course_map) != 0:
+                    return render_template('index.html', coursemap=course_map, coursename=title_name, showtitle=True)
+                
+                else:
+                    return render_template('index.html', showerror=True, coursename=title_name)
+
+            else:
+                course_url, course_title, course_price = extract_features(result_df)
+                course_map = dict(zip(course_title, course_url))
+                if len(course_map) != 0:
+                    return render_template('index.html', coursemap=course_map, coursename=title_name, showtitle=True)
+                
+                else:
+                    return render_template('index.html', showerror=True, coursename=title_name)
+
+    return render_template("index.html")
+
