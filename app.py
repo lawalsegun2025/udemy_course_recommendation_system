@@ -51,6 +51,9 @@ def read_data():
 
     df = pd.read_csv("udemy_course_data.csv")
 
+    # convert price from Rupee to Dollar
+    df["price"] = df["price"] * 0.0121
+
     return df
 
 
@@ -63,3 +66,73 @@ def recommend_course(df, title, cosine_mat, num_rec):
     
     # Get the index number of the selected course title
     index = course_index[title]
+
+    # get a list of course index and the cosine similarity score
+    scores = list(enumerate(cosine_mat[index]))
+
+    # sort the scores in decending order from highest to lowest
+    sorted_scores = sorted(scores, key=lambda x: x[1], reverse=True)
+
+    # get the index of cosine similarity score. we are indexing from [1:] 
+    # to exclude the selected course and not recommend it.
+    selected_course_index = [i[0] for i in sorted_scores[1:]]
+
+    # Get course cosine similarity score. we are indexing from [1:] 
+    # to exclude the selected course and not recommend it.
+    selected_course_score = [i[1] for i in sorted_scores[1:]]
+
+    # locate the recommended courses by indexing on the dataframe df
+    rec_df = df.iloc[selected_course_index]
+
+    # Add the similarity score to the rec_df dataframe
+    rec_df["similarity_score"] = selected_course_score
+
+    # select required columns
+    final_recommende_courses = rec_df[[
+        'course_title', 'similarity_score', 'url', 'price', 
+        'num_subscribers'
+    ]]
+
+    return final_recommende_courses.head(num_rec)
+
+
+# Extract features from the  recommended dataframe
+def extract_features(rec_def):
+
+    # get course url
+    course_url = list(rec_def["url"])
+    # get course title
+    course_title = list(rec_df["course_title"])
+    # get course price
+    course_price = list(rec_df["price"])
+
+    return course_url, course_title, course_price
+
+
+# Home page route
+@app.route("/", method=["GET", "POST"])
+def hello_world():
+
+    if request.method == "POST":
+
+        # get course title
+        my_dict = request.form
+        title_name = my_dict["course"]
+        print(title_name)
+
+        try:
+            # read in the dataframe
+            df = read_data()
+            # clean the title column
+            df = get_clean_title(df)
+
+            # Count vectorize the title column
+            cv_mat = get_cv_mat(df)
+            # Get cosine similarity matrix
+            cosine_mat = cosine_sim_mat(cv_mat)
+            # assingn number of recommendation needed
+            num_rec = 6
+
+            # get recommended courses dataframe
+            rec_df = recommend_course(df, title_name, 
+                                      cosine_mat, num_rec)
