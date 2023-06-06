@@ -1,0 +1,6 @@
+os
+flask
+pandas
+numpy
+neattext.functions
+scikit-learn
