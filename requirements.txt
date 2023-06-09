@@ -4,3 +4,4 @@ pandas
 numpy
 neattext.functions
 scikit-learn
+rake_nltk
