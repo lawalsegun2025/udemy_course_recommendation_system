@@ -168,40 +168,40 @@
 
     <script>
 
-        var value_counts = {{ value_counts | safe}};
-        var level_counts = {{ level_counts|safe}};
-        var subjects_per_level = {{ subjects_per_level|safe}};
+        var valuecounts = {{ valuecounts| safe}};
+        var levelcounts = {{ levelcounts| safe}};
+        var subjectsperlevel = {{ subjectsperlevel| safe}};
 
-        var subscribers_count_map = {{ subscribers_count_map|safe}};
+        var subscriberscountmap = {{ subscriberscountmap| safe}};
 
-        var year_wise_profit_map = {{ year_wise_profit_map|safe}};
+        var yearwiseprofitmap = {{ yearwiseprofitmap| safe}};
 
-        var profit_month_wise = {{ profit_month_wise|safe}};
+        var profitmonthwisemap = {{ profitmonthwise| safe}};
 
-        var month_wise_sub_map = {{ month_wise_sub|safe}};
+        var monthwisesubmap = {{ monthwisesub| safe}};
 
 
 
-        var domain_name = new Array();
-        var count_domain = new Array();
-        var level_name = new Array();
-        var level_count = new Array();
+        var domainname = new Array();
+        var countdomain = new Array();
+        var levelname = new Array();
+        var levelcount = new Array();
 
-        var level_name_2 = new Array();
-        var level_count_2 = new Array();
+        var levelname2 = new Array();
+        var levelcount2 = new Array();
         var years = new Array();
-        var profit_count = new Array();
-        var subscribers_count = new Array();
+        var profitcount = new Array();
+        var subscriberscount = new Array();
 
         var months = new Array();
-        var profit_month_wise = new Array();
-        var subscribers_count_month = new Array();
+        var profitmonthwise = new Array();
+        var subscriberscountmonth = new Array();
 
         // count per domain first chart
 
-        for (const item in value_counts) {
-            domain_name.push(item)
-            count_domain.push(value_counts[item])
+        for (const item in valuecounts) {
+            domainname.push(item)
+            countdomain.push(valuecounts[item])
         }
 
         //Number of Courses Level Wise
