@@ -117,7 +117,7 @@ def extract_features(rec_df):
 
 
 # Home page route
-@app.route("/", method=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def hello_world():
 
     if request.method == "POST":
