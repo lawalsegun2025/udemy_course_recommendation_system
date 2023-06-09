@@ -168,77 +168,77 @@
 
     <script>
 
-        var valuecounts = {{ valuecounts| safe}};
-        var levelcounts = {{ levelcounts| safe}};
-        var subjectsperlevel = {{ subjectsperlevel| safe}};
+        var value_counts = {{value_counts|safe}};
+        var level_counts = {{level_counts|safe}};
+        var subjects_per_level = {{subjects_per_level|safe}};
 
-        var subscriberscountmap = {{ subscriberscountmap| safe}};
+        var subscribers_count_map = {{subscribers_count_map|safe}};
 
-        var yearwiseprofitmap = {{ yearwiseprofitmap| safe}};
+        var year_wise_profit_map = {{ year_wise_profit_map|safe}};
 
-        var profitmonthwisemap = {{ profitmonthwise| safe}};
+        var profit_month_wise_map = {{ profit_month_wise|safe}};
 
-        var monthwisesubmap = {{ monthwisesub| safe}};
+        var month_wise_sub_map = {{ month_wise_sub|safe}};
 
 
 
-        var domainname = new Array();
-        var countdomain = new Array();
-        var levelname = new Array();
-        var levelcount = new Array();
+        var domain_name = new Array();
+        var count_domain = new Array();
+        var level_name = new Array();
+        var level_count = new Array();
 
-        var levelname2 = new Array();
-        var levelcount2 = new Array();
+        var level_name_2 = new Array();
+        var level_count_2 = new Array();
         var years = new Array();
-        var profitcount = new Array();
-        var subscriberscount = new Array();
+        var profit_count = new Array();
+        var subscribers_count = new Array();
 
         var months = new Array();
-        var profitmonthwise = new Array();
-        var subscriberscountmonth = new Array();
+        var profit_month_wise = new Array();
+        var subscribers_count_month = new Array();
 
         // count per domain first chart
 
-        for (const item in valuecounts) {
-            domainname.push(item)
-            countdomain.push(valuecounts[item])
+        for (const item in value_counts) {
+            domain_name.push(item)
+            count_domain.push(value_counts[item])
         }
 
         //Number of Courses Level Wise
 
-        for (const item in levelcounts) {
-            levelname.push(item)
-            levelcount.push(levelcounts[item])
+        for (const item in level_counts) {
+            level_name.push(item)
+            level_count.push(level_counts[item])
         }
 
         // Subjects per level {last chart}
-        for (const item in subjectsperlevel) {
-            levelname2.push(item)
-            levelcount2.push(subjectsperlevel[item])
+        for (const item in subjects_per_level) {
+            level_name_2.push(item)
+            level_count_2.push(subjects_per_level[item])
         }
 
         // YearWise Profit
-        for (const item in yearwiseprofitmap) {
+        for (const item in year_wise_profit_map) {
             years.push(item)
-            profitcount.push(yearwiseprofitmap[item])
+            profit_count.push(year_wise_profit_map[item])
         }
 
         // YearWise Subscribers Count
 
-        for (const item in subscriberscountmap) {
-            subscriberscount.push(subscriberscountmap[item])
+        for (const item in subscribers_count_map) {
+            subscribers_count.push(subscribers_count_map[item])
         }
 
         //profit monthwise
-        for (const item in profitmonthwisemap) {
+        for (const item in profit_month_wise_map) {
             months.push(item)
-            profitmonthwise.push(profitmonthwisemap[item])
+            profit_month_wise.push(profit_month_wise_map[item])
         }
 
-        //subscriberscount monthwise
-        for (const item in monthwisesubmap) {
+        //subscribers_count monthwise
+        for (const item in month_wise_sub_map) {
 
-            subscriberscountmonth.push(monthwisesubmap[item])
+            subscribers_count_month.push(month_wise_sub_map[item])
         }
 
 
@@ -251,10 +251,10 @@
         var myChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: domainname,
+                labels: domain_name,
                 datasets: [{
-                    label: domainname,
-                    data: countdomain,
+                    label: domain_name,
+                    data: count_domain,
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(75, 192, 192)',
@@ -317,10 +317,10 @@
         var myChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: levelname,
+                labels: level_name,
                 datasets: [{
-                    label: levelname,
-                    data: levelcount,
+                    label: level_name,
+                    data: level_count,
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(75, 192, 192)',
@@ -347,7 +347,7 @@
                 labels: years,
                 datasets: [{
                     label: "Number of Subscribers",
-                    data: subscriberscount,
+                    data: subscribers_count,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -385,7 +385,7 @@
                 labels: years,
                 datasets: [{
                     label: "Profit Earned Year Wise",
-                    data: profitcount,
+                    data: profit_count,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -423,7 +423,7 @@
                 labels: months,
                 datasets: [{
                     label: "Profit Earned Month Wise",
-                    data: profitmonthwise,
+                    data: profit_month_wise,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -461,7 +461,7 @@
                 labels: months,
                 datasets: [{
                     label: "Subscriber count Month Wise",
-                    data: subscriberscountmonth,
+                    data: subscribers_count_month,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -497,11 +497,11 @@
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: levelname2,
+                labels: level_name_2,
                 datasets: [
                     {
                         label: "Number of Subscribers enrolled per subject category",
-                        data: levelcount2,
+                        data: level_count_2,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
