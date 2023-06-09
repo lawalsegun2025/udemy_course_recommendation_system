@@ -180,7 +180,7 @@ def hello_world():
     return render_template("index.html")
 
 
-@app.route("/dashboard", method=["GET", "POST"])
+@app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
 
     df = read_data()
