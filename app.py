@@ -197,5 +197,6 @@ def dashboard():
                            subscriberscountmap=subscribers_count_map, profitmonthwise=profit_month_wise, 
                            monthwisesub=month_wise_sub)
 
+
 if __name__ == "__main__":
     app.run(debug=True)
