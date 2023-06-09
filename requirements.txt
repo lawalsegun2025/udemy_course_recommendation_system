@@ -1,4 +1,4 @@
-Flask>=2.2.2
+Flask
 pandas
 numpy
 neattext==0.1.3

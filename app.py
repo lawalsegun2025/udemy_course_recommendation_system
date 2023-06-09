@@ -1,5 +1,6 @@
 from os import read 
 from flask import Flask, request, render_template
+from markupsafe import escape
 
 import pandas as pd 
 import numpy as np 
