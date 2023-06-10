@@ -19,6 +19,10 @@
 
 
 
+https://github.com/lawalsegun2025/udemy_course_recommendation_system/assets/94943377/a7decaed-11a9-4a44-a5c9-9960f0aa13ab
+
+
+
 ## Overview
 
 This project helps recommend similar courses on udemy for which the user is searching for. The user enters the name or phrase of a subject of interest and related courses will be recommended and displayed. There is also and analysis dashboard that gives all the analysis of the udemy courses available in the dataset. </br></br>
