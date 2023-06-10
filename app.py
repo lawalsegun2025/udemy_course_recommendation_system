@@ -193,10 +193,10 @@ def dashboard():
 
     year_wise_profit_map, subscribers_count_map, profit_month_wise, month_wise_sub = year_wise_profit(df) 
 
-    return render_template('dashboard.html', valuecounts=value_counts, levelcounts=level_counts,
-                           subjectsperlevel=subjects_per_level, yearwiseprofitmap=year_wise_profit_map, 
-                           subscriberscountmap=subscribers_count_map, profitmonthwise=profit_month_wise, 
-                           monthwisesub=month_wise_sub)
+    return render_template('dashboard.html', value_counts=value_counts, level_counts=level_counts,
+                           subjects_per_level=subjects_per_level, year_wise_profit_map=year_wise_profit_map, 
+                           subscribers_count_map=subscribers_count_map, profit_month_wise=profit_month_wise, 
+                           month_wise_sub=month_wise_sub)
 
 
 if __name__ == "__main__":
