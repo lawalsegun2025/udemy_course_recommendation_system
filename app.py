@@ -55,6 +55,9 @@ def read_data():
     # convert price from Rupee to Dollar
     df["price"] = df["price"] * 0.0121
 
+    # convert course title to lower cases
+    df["course_title"] = df["course_title"].apply(lambda x: x.lower())
+
     return df
 
 
