@@ -15,4 +15,5 @@ jsonschema==3.2.0
 
 # ==17.0.0
 pyzmq
-ipykernel==4.8.2
+# ==4.8.2
+ipykernel
