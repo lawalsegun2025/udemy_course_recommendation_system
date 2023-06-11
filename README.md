@@ -102,6 +102,17 @@ For the exploratory data analysis, we explored the dataset by trying to answer t
 
 ## Recommendation System
 
+**Algorithms**
+* Cosine Similarity
+* Linear Similarity
+
+**Workflow**
+* Import Dataset
+* Vectorize Dataset
+* Cosine Similarity Matrix
+* ID Score
+* Recommend
+
 ## Data Cleaning Techniques
 
 ## Model Building
