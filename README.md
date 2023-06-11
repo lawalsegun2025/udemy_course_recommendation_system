@@ -113,6 +113,10 @@ For the exploratory data analysis, we explored the dataset by trying to answer t
 * ID Score
 * Recommend
 
+For building the course recommendation system, we will be working with only the `course_title` column only. We start by cleaning the `course_title` using `neattext.functions` column as it is a text data. 
+
+**`neattext`** is a simple Natural Language Processing package for cleaning text data and pre-processing text data. It can be used to clean sentences, extract emails, phone numbers, web links, and emojis from sentences.
+
 ## Data Cleaning Techniques
 
 ## Model Building
