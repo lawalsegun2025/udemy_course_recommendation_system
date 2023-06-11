@@ -6,7 +6,7 @@ scikit-learn==1.2.1
 rake-nltk==1.0.6
 itsdangerous==1.1.0
 click<8.0,>=5.1
-Jinja2<3.0,>=2.10.1
+# Jinja2<3.0,>=2.10.1
 # jinja2<=3.1.0
 MarkupSafe==1.1.1
 Werkzeug==0.15.5
