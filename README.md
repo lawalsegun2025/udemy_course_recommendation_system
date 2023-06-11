@@ -8,10 +8,6 @@
 * [Source of Dataset](#source-of-dataset)
 * [Exploratory Data Analysis](#exploratory-data-analysis)
 * [Recommendation System](#recommendation-system)
-* [Data Cleaning Techniques](#data-cleaning-techniques)
-* [Model Building](#model-building)
-* [Model Performance](#model-performance)
-* [Deployment](#deployment)
 * [Future scope of project](#future-scope-of-project)
 
 ## Demo
@@ -117,12 +113,7 @@ For building the course recommendation system, we will be working with only the 
 
 **`neattext`** is a simple Natural Language Processing package for cleaning text data and pre-processing text data. It can be used to clean sentences, extract emails, phone numbers, web links, and emojis from sentences.
 
-## Data Cleaning Techniques
-
-## Model Building
-
-## Model Performance
-
-## Deployment
 
 ## Future scope of project
+
+The data set for thid project included only 4 categories of courses (Business Finance, Graphic Design, Musical Instruments and Web Design). More catecories of courses could be added.
