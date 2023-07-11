@@ -9,6 +9,8 @@ itsdangerous>=2.0
 click>=8.0
 
 
+gunicorn
+
 MarkupSafe>=2.0
 
 Werkzeug>=2.0
